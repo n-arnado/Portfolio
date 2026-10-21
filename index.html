@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Norwejean R. Arnado | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* ===== COLORS — change these to restyle the whole site ===== */
+    :root {
+      --bg: #f6f7fb;
+      --card: #ffffff;
+      --text: #14182b;
+      --muted: #5b6075;
+      --accent: #3b5bdb;
+      --border: #e2e5ef;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    a { color: var(--accent); text-decoration: none; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    section { padding: 70px 0; border-bottom: 1px solid var(--border); }
+    h2 { font-size: 0.85rem; letter-spacing: 3px; text-transform: uppercase; color: var(--accent); margin-bottom: 24px; }
+
+    /* ===== NAV ===== */
+    nav { position: sticky; top: 0; background: rgba(246,247,251,0.9); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); z-index: 10; }
+    nav .container { display: flex; justify-content: space-between; align-items: center; height: 60px; }
+    nav .logo { font-weight: 800; color: var(--text); }
+    nav ul { display: flex; gap: 22px; list-style: none; }
+    nav ul a { color: var(--muted); font-size: 0.9rem; }
+    nav ul a:hover { color: var(--text); }
+
+    /* ===== HERO ===== */
+    .hero { padding: 110px 0 90px; }
+    .hero .container { display: flex; align-items: center; gap: 40px; }
+    .hero .photo { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 4px solid var(--card); box-shadow: 0 6px 24px rgba(20,24,43,0.12); flex-shrink: 0; }
+    .hero p.hi { color: var(--accent); font-weight: 500; margin-bottom: 10px; }
+    .hero h1 { font-size: clamp(2.4rem, 7vw, 4rem); font-weight: 800; line-height: 1.1; margin-bottom: 18px; }
+    .hero .tagline { font-size: 1.15rem; color: var(--muted); max-width: 600px; margin-bottom: 30px; }
+    .btn { display: inline-block; padding: 12px 22px; border-radius: 8px; font-weight: 600; margin-right: 10px; margin-bottom: 10px; }
+    .btn-main { background: var(--accent); color: #fff; }
+    .btn-outline { border: 1px solid var(--border); color: var(--text); }
+
+    /* ===== ABOUT ===== */
+    .about p { color: var(--muted); max-width: 700px; margin-bottom: 14px; }
+
+    /* ===== PROJECTS ===== */
+    .projects { display: grid; gap: 20px; }
+    .project { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; box-shadow: 0 2px 10px rgba(20,24,43,0.05); }
+    .project img { width: 100%; border-radius: 8px; margin-bottom: 16px; border: 1px solid var(--border); }
+    .project-top { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-bottom: 6px; }
+    .project h3 { font-size: 1.25rem; }
+    .project .date { color: var(--muted); font-size: 0.85rem; }
+    .project .role { color: var(--accent); font-size: 0.9rem; margin-bottom: 12px; }
+    .project ul { padding-left: 18px; color: var(--muted); margin-bottom: 14px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tags span { font-size: 0.78rem; padding: 4px 10px; background: #edf0fc; border-radius: 20px; color: var(--accent); }
+
+    /* ===== SKILLS ===== */
+    .skill-group { margin-bottom: 22px; }
+    .skill-group h3 { font-size: 1rem; margin-bottom: 10px; }
+
+    /* ===== CERTIFICATIONS ===== */
+    .certs { list-style: none; }
+    .certs li { padding: 10px 0; border-bottom: 1px solid var(--border); color: var(--muted); }
+    .certs li strong { color: var(--text); }
+
+    /* ===== CONTACT ===== */
+    .contact p { color: var(--muted); margin-bottom: 20px; }
+    footer { text-align: center; padding: 30px 0; color: var(--muted); font-size: 0.85rem; }
+
+    @media (max-width: 600px) { nav ul { display: none; } .hero .container { flex-direction: column-reverse; align-items: flex-start; } .hero .photo { width: 140px; height: 140px; } }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <nav>
+    <div class="container">
+      <a href="#" class="logo">N. Arnado</a>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <header class="hero">
+    <div class="container">
+      <div>
+      <p class="hi">Hi, I'm</p>
+      <h1>Norwejean R. Arnado</h1>
+      <p class="tagline">Fourth-year BS Information Technology student at the University of San Jose–Recoletos, working on backend, frontend, and design through school team projects.</p>
+      <a href="#projects" class="btn btn-main">View Projects</a>
+      <a href="#contact" class="btn btn-outline">Contact Me</a>
+      </div>
+      <img src="images/profile.jpg" alt="Norwejean R. Arnado" class="photo">
+    </div>
+  </header>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about">
+    <div class="container about">
+      <h2>About Me</h2>
+      <p>I chose IT because I was drawn to computers. I started with no coding knowledge, and I learned step by step through tutorials, resources, and guidance from others.</p>
+      <p>I take time to fully understand a problem, but finally making something work is what keeps me going. I'm interested in backend development, UI and graphic design, and cybersecurity, and I'm looking for an IT internship to gain real work experience and keep learning.</p>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="projects">
+
+        <!-- PROJECT 1 — copy this whole <div class="project"> block to add more -->
+        <div class="project">
+          <img src="images/tapsakay.jpg" alt="TapSakay screenshot">
+          <div class="project-top">
+            <h3>TapSakay – Jeepney Tracking System</h3>
+            <span class="date">July 2026 – Present</span>
+          </div>
+          <p class="role">Full-Stack Developer · Capstone Project · Team project</p>
+          <ul>
+            <li>A system that shows commuters when the next jeepney is coming and how many seats are free. Made with El Pardo Transport Cooperative.</li>
+            <li>Built the backend API for rides, seats, routes, and passenger demand, and used MQTT for live updates.</li>
+            <li>Made the driver dashboard and the super admin pages.</li>
+          </ul>
+          <div class="tags"><span>Angular</span><span>Express.js</span><span>PostgreSQL</span><span>MQTT</span></div>
+        </div>
+
+        <div class="project">
+          <img src="images/sentry.jpg" alt="SENTRY screenshot">
+          <div class="project-top">
+            <h3>SENTRY – Room Monitoring System</h3>
+            <span class="date">June 2026 – July 2026</span>
+          </div>
+          <p class="role">Backend and Testing · Professional Elective 3 · Team project</p>
+          <ul>
+            <li>A system that uses cameras to detect people in a room outside class hours and saves a picture.</li>
+            <li>Connected the system to the database, tested it, and fixed problems with saved pictures and the admin face login.</li>
+          </ul>
+          <div class="tags"><span>Python</span><span>Express.js</span><span>MariaDB</span></div>
+        </div>
+
+        <div class="project">
+          <img src="images/forkhub.jpg" alt="ForkHub screenshot">
+          <div class="project-top">
+            <h3>ForkHub – Food Ordering System</h3>
+            <span class="date">January 2026 – May 2026</span>
+          </div>
+          <p class="role">Full-Stack Developer · Professional Elective 2 · Team project</p>
+          <ul>
+            <li>Made the menu page and its backend, and added image upload for menu items.</li>
+            <li>Saved orders on the server instead of the browser, and fixed bugs in login, user roles, and orders.</li>
+          </ul>
+          <div class="tags"><span>React</span><span>Node.js</span><span>Express.js</span></div>
+        </div>
+
+        <div class="project">
+          <img src="images/eduface.jpg" alt="EduFace screenshot">
+          <div class="project-top">
+            <h3>EduFace – Attendance System</h3>
+            <span class="date">August 2025 – December 2025</span>
+          </div>
+          <p class="role">Database and Frontend Developer · Software Engineering 1 · Team project</p>
+          <ul>
+            <li>An attendance system where students check in by scanning their face.</li>
+            <li>Planned the database, made the system diagrams, and built the admin dashboard, login, register, and reset password pages.</li>
+          </ul>
+          <div class="tags"><span>MySQL</span><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section id="skills">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="skill-group">
+        <h3>Languages & Frameworks</h3>
+        <div class="tags"><span>JavaScript</span><span>TypeScript</span><span>PHP</span><span>Java</span><span>Python</span><span>HTML</span><span>CSS</span><span>SQL</span><span>Node.js/Express</span><span>Laravel</span><span>React</span><span>Angular</span></div>
+      </div>
+      <div class="skill-group">
+        <h3>Databases & Tools</h3>
+        <div class="tags"><span>MySQL</span><span>PostgreSQL</span><span>Git</span><span>GitHub</span><span>Raspberry Pi</span><span>OpenCV</span><span>Windows Server</span><span>VirtualBox</span><span>Cisco Packet Tracer</span><span>Power BI</span></div>
+      </div>
+      <div class="skill-group">
+        <h3>Design</h3>
+        <div class="tags"><span>Figma</span><span>Canva</span><span>Adobe Photoshop</span><span>Adobe Illustrator</span><span>UI Design</span><span>Posters & Layouts</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CERTIFICATIONS ===== -->
+  <section id="certs">
+    <div class="container">
+      <h2>Certifications & Activities</h2>
+      <ul class="certs">
+        <li><strong>1st Runner-Up</strong>, SCS Days Hackathon 2025</li>
+        <li><strong>Participant</strong>, Hack4Gov 2025</li>
+        <li><strong>Paytaca Blockchain Training</strong>, 2025</li>
+        <li><strong>Seminar:</strong> Becoming a Human-Certified .NET Engineer in the AI Era, 2026</li>
+        <li><strong>AI Upskilling Training Program</strong>, 2026</li>
+        <li><strong>TOPCIT Level 2</strong>, 2026</li>
+        <li><strong>Dean's Lister</strong>, 2nd Semester, AY 2024–2025</li>
+        <li><strong>Auditor</strong>, Information and Computer Technology Organization (ICTO), 2024–2025</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" style="border-bottom:none;">
+    <div class="container contact">
+      <h2>Contact</h2>
+      <p>I'm open to OJT and internship opportunities. Feel free to reach out.</p>
+      <!-- Replace with your real email and links -->
+      <a href="mailto:youremail@gmail.com" class="btn btn-main">youremail@gmail.com</a>
+      <a href="https://github.com/n-arnado" target="_blank" class="btn btn-outline">GitHub</a>
+    </div>
+  </section>
+
+  <footer>© 2026 Norwejean R. Arnado</footer>
+
+</body>
+</html>
